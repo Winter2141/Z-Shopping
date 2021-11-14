@@ -1,0 +1,778 @@
+/**
+ * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
+ * @copyright Aimeos (aimeos.org), 2015-2018
+ */
+
+
+/* General */
+
+.aimeos a {
+	text-decoration: none;
+}
+
+.aimeos a:hover:not(.btn) {
+	text-decoration: underline;
+	text-decoration-skip-ink: all;
+}
+
+
+/* Pagination */
+
+.aimeos .list-page {
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+
+.aimeos .list-page .page-limit,
+.aimeos .list-page .pagination {
+	vertical-align: middle;
+	display: inline-flex;
+	margin: .5rem;
+}
+
+.aimeos .list-page {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.aimeos .list-page .page-item {
+	display: inline-block;
+	text-align: center;
+}
+
+.aimeos .list-page .btn {
+	padding: 0.375rem 1rem;
+}
+
+.aimeos .list-page .page-link {
+	background-color: var(--bs-bg-light, #ffffff);
+	color: var(--bs-secondary, #707880);
+	min-width: 3rem;
+}
+
+.aimeos .list-page .page-link:hover {
+	background-color: var(--bs-secondary, #707880);
+	color: var(--bs-bg-light, #ffffff);
+}
+
+.page-limit .dropdown-menu {
+	min-width: 5rem;
+}
+
+.page-limit .dropdown-menu .dropdown-item {
+	text-align: center
+}
+
+.page-limit .dropdown-link {
+	display: inline-block;
+	padding: .25rem 0rem;
+	color: var(--bs-secondary, #707880);
+	width: 100%;
+}
+
+.page-limit .dropdown-link:focus,
+.page-limit .dropdown-link:active {
+	text-decoration: none;
+}
+
+.page-limit .dropdown-link:active {
+	background-color: var(--bs-menu-bg, #30a0e0);
+	color: var(--bs-menu, #ffffff);
+}
+
+
+/** Tree view */
+
+.aimeos .tree-toolbar,
+.aimeos .tree-content {
+	margin-bottom: 1rem;
+}
+
+.aimeos .tree-toolbar .btn {
+	font-size: initial;
+}
+
+.aimeos .tree-toolbar .btn.expand-all:before {
+	content: "\f065";
+}
+
+.aimeos .tree-toolbar .btn.collapse-all:before {
+	content: "\f066";
+}
+
+.aimeos .tree-toolbar .search-input {
+	border-top: 1px solid var(--bs-line-light, #dee2e6);
+	border-bottom: 1px solid var(--bs-line-light, #dee2e6);
+}
+
+.aimeos .tree-toolbar .btn.act-add:before {
+	content: "\f067";
+}
+
+.aimeos .tree-toolbar .btn.act-delete:before {
+	content: "\f068";
+}
+
+
+.aimeos form.list {
+	background-color: var(--bs-bg-light, #ffffff);
+	border: 1px solid rgba(0,0,0,.125);
+	box-shadow: var(--bs-shadow);
+	margin: 0.5rem 0;
+	padding: 1rem;
+}
+
+
+/* Item listing */
+
+.container-fluid,
+.aimeos .list-view {
+	padding-left: .5rem;
+	padding-right: .5rem;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+}
+
+@media (min-width: 576px) {
+	.container-fluid,
+	.aimeos .list-view {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.container-fluid,
+	.aimeos .list-view {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.container-fluid,
+	.aimeos .list-view {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+.aimeos .noitems {
+	margin: 1rem;
+}
+
+.aimeos tbody tr.list-search {
+	background-color: var(--bs-bg-dark, #f4f8fb);
+}
+
+.aimeos .list-item-new {
+	background-color: var(--bs-bg, #f8fafc);
+}
+
+.aimeos .list-items .btn.fa {
+	margin: 0 0.25rem;
+	padding: 0.5rem;
+}
+
+.aimeos .list-items th {
+	background-color: var(--bs-primary, #30a0e0);
+	color: var(--bs-menu, #ffffff);
+}
+
+.aimeos .list-items th.actions {
+	background-color: var(--bs-primary-light, #5BB3E6);
+}
+
+.aimeos .list-items th a {
+	color: var(--bs-menu, #ffffff);
+	white-space: nowrap;
+	font-weight: normal;
+	margin: auto;
+}
+
+.aimeos .list-items th .btn:hover {
+	color: var(--bs-secondary-dark, #101820);
+	background-color: var(--bs-bg-light, #FFFFFF);
+}
+
+.aimeos .list-items .dropdown-item .btn {
+	text-align: start;
+	color: var(--bs-secondary-dark, #101820);
+}
+
+.aimeos .list-items th button {
+	border-color: transparent;
+	color: var(--bs-menu, #ffffff);
+}
+
+.aimeos .list-items th .dropdown-toggle:focus {
+	box-shadow: 0 0 0 2px rgba(2, 117, 216, .25);
+}
+
+.aimeos .list-items tr:not(.list-search) td.image {
+	height: 5rem;
+}
+
+.aimeos .list-items img.image {
+	max-height: 5rem;
+	max-width: 5rem;
+}
+
+.aimeos .list-items a.items-field {
+	display: inline;
+	color: var(--bs-secondary, #707880);
+}
+
+.aimeos .list-items .sort-asc:after {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: " \f176";
+}
+
+.aimeos .list-items .sort-desc:after {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: " \f175";
+}
+
+.aimeos .list-items .status-1:before {
+	content: "\f00c";
+}
+
+.aimeos .list-items .status-0:before {
+	content: "\f00d";
+}
+
+.aimeos .list-items .status--1:before {
+	content: "\f06e";
+}
+
+.aimeos .list-items .status--2:before {
+	content: "\f187";
+}
+
+.aimeos .list-items .config-item {
+	white-space: nowrap;
+	text-align: start;
+	max-width: 15rem;
+	overflow: hidden;
+}
+
+.aimeos .list-items .config-key:after {
+	content: ":";
+}
+
+.aimeos .list-items .config-value {
+	color: var(--bs-secondary, #707880);
+}
+
+.aimeos .list-items a.items-field.act-view:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f06e";
+}
+
+.aimeos table .list-item-new .actions .btn.act-close {
+	color: var(--bs-light, #9098a0);
+}
+
+
+
+/* Detail view */
+
+.aimeos .item-header {
+	font-size: 150%;
+	padding: 0.5rem 0;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid var(--bs-line-light, #dee2e6);
+}
+
+.aimeos h2.item-header.is-invalid {
+	color: var(--bs-danger, #dc3545);
+	border-bottom: 1px solid var(--bs-danger, #dc3545);
+}
+
+.aimeos h3.item-header {
+	font-size: 125%;
+}
+
+.aimeos .item-meta {
+	margin: 1rem 0.5rem;
+	text-align: center;
+}
+
+.aimeos .item-meta small,
+.aimeos .item-tree .item-meta small {
+	white-space: nowrap;
+	margin: 0.5rem;
+	font-size: 80%;
+	display: inline-block;
+}
+
+.aimeos .item-meta small {
+	margin: 0 0.5rem 0.25rem;
+}
+
+.aimeos .item-meta .meta-value {
+	white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+	.aimeos .item-meta small {
+		white-space: normal;
+		margin: 0.5rem 0;
+		display: block;
+	}
+}
+
+.aimeos .item .form-group.mandatory label:after {
+	margin-left: 0.25rem;
+	white-space: nowrap;
+	content: " *";
+}
+
+.aimeos .help {
+	text-decoration: underline solid;
+	text-decoration-skip-ink: all;
+	cursor: help;
+}
+
+.aimeos .help-text {
+	font-size: 80%;
+	display: none;
+}
+
+
+.aimeos .list-items .config-item input {
+	width: 7.5rem;
+}
+
+
+.aimeos .list-items .config-item-key,
+.aimeos .list-items .config-item-value {
+	width: 49%;
+}
+
+.aimeos .list-items .config-item .action {
+	width: 2%;
+}
+
+
+.aimeos table.item-config .config-row-key,
+.aimeos table.item-config .config-row-value {
+	width: 49%;
+}
+
+.aimeos .config-map-table,
+.aimeos .config-list-table {
+	display: none;
+}
+
+.aimeos td.config-map-action-add,
+.aimeos td.config-list-action-add {
+	width: 2%;
+}
+
+.aimeos .attribute-list th:not(.actions) {
+	width: 49%;
+}
+
+.aimeos .attribute-list th.actions {
+	width: 2%;
+}
+
+.aimeos .property-type,
+.aimeos .property-language {
+	width: 25%;
+}
+
+.aimeos .item-price .pricecustom .form-control-label {
+	justify-content: flex-start;
+}
+
+/* Bundles */
+
+.aimeos .item-navbar .nav-item.bundle {
+	display: none;
+}
+
+
+/* Catalog */
+
+.aimeos .list-search .catalog-lists-position,
+.aimeos .list-search .customer-lists-position,
+.aimeos .list-search .catalog-lists-status,
+.aimeos .list-search .customer-lists-status,
+.aimeos .list-search .catalog-lists-type,
+.aimeos .list-search .customer-lists-type,
+.aimeos .list-search .catalog-lists-config,
+.aimeos .list-search .customer-lists-config {
+	width: 15%;
+}
+
+.aimeos .list-search .catalog-lists-refid,
+.aimeos .list-search .customer-lists-refid {
+	width: 35%;
+}
+
+@media (max-width: 991px) {
+	.aimeos .item-catalog .tree-content {
+		max-height: 400px;
+		overflow: auto;
+	}
+}
+
+
+/* Download */
+
+.aimeos .item-download item-file {
+	word-break: break-all;
+}
+
+
+/* Images */
+
+.aimeos .item-media .media-preview {
+	border: 2px dashed #B0B0B0;
+	border-radius: .25rem;
+	position: relative;
+	height: 12.25rem;
+}
+
+.aimeos .item-media .media-preview p {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.aimeos .item-media .media-preview img {
+	max-height: calc(12.25rem - 4px);
+	max-width: 100%;
+	display: block;
+	margin: auto;
+	top: 50%;
+	position: relative;
+	transform: translate(0, -50%);
+}
+
+.aimeos .item-media .media-preview .fileupload {
+	height: calc(12.25rem - 4px);
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0;
+	z-index: 1;
+}
+
+
+/** Selection */
+
+.aimeos .item-navbar .nav-item.selection {
+	display: none;
+}
+
+
+/** Stock */
+
+.aimeos .item-stock .stock-type,
+.aimeos .item-stock .stock-stocklevel,
+.aimeos .item-stock .stock-dateback,
+.aimeos .item-stock .stock-timeframe {
+	width: 25%;
+}
+
+.aimeos .item-stock .item-stockflag {
+	display: inline-block;
+	width: 20%;
+}
+
+.aimeos .item-stock .item-stocklevel {
+	justify-content: space-between;
+	display: inline-flex;
+	text-align: center;
+	width: 80%;
+}
+
+.aimeos .item-stock .item-stocklevel-diff {
+	text-align: end;
+	border: none;
+	padding: 0;
+	width: 40%;
+}
+
+.aimeos .item-stock .item-stocklevel-diff:focus {
+	background-color: var(--bs-bg-light, #ffffff);
+	color: var(--bs-secondary, #505860);
+	box-shadow: none;
+	outline: none;
+}
+
+
+/** Subscription */
+
+.aimeos .item-subscription span.form-control {
+	border-color: transparent;
+}
+
+.aimeos .item-subscription .interval-field {
+	width: 10%;
+}
+
+
+/** Order */
+
+.aimeos .list-order .list-header .actions .act-add {
+	display: none;
+}
+
+.aimeos .list-order .line {
+	border-bottom: 1px solid #333;
+	white-space: nowrap;
+	display: block;
+}
+
+.aimeos .list-order .line:last-child {
+	border-bottom: none;
+}
+
+.aimeos .list-order .list-item .actions .act-copy {
+	visibility: hidden;
+}
+
+.aimeos .item-order.tab-pane {
+	overflow-x: initial;
+}
+
+.aimeos .item-order span.form-control:not(.ai-combobox) {
+	border-color: transparent;
+}
+
+
+.aimeos .item-order .item-product-list .list-item {
+	padding: 0.5rem;
+}
+
+.aimeos .item-order .item-product-list .list-item:nth-of-type(odd) {
+	background-color: var(--bs-bg-dark, #F4F8FB);
+}
+
+.aimeos .item-order .item-product-list .form-control-label {
+	justify-content: flex-start;
+}
+
+.aimeos .item-order .item-product-list .column-qtyopen .form-control-label,
+.aimeos .item-order .item-product-list .column-sum .form-control-label {
+	justify-content: center;
+}
+
+.aimeos .item-order .item-product-list .product-sku:before {
+	content: "(";
+}
+
+.aimeos .item-order .item-product-list .product-sku:after {
+	content: ")";
+}
+
+.aimeos .item-order .item-product-list .column-subscription .btn-subscription:before {
+	content: "\f073";
+}
+
+.aimeos .item-order .item-product-list .column-sum,
+.aimeos .item-order .item-product-list .column-qtyopen {
+	white-space: nowrap;
+	text-align: center;
+}
+
+.aimeos .item-order .item-product-list .product-qtyopen {
+	display: inline;
+	max-width: 7rem;
+	text-align: center;
+}
+
+.aimeos .item-order .item-product-list .product-sku,
+.aimeos .item-order .item-product-list .product-name,
+.aimeos .item-order .item-product-list .product-price,
+.aimeos .item-order .item-product-list .product-costs,
+.aimeos .item-order .item-product-list .product-rebate {
+	display: block;
+}
+
+@media screen and (max-width: 575px) {
+	.aimeos .item-order .item-product-list .column-qtyopen .form-control-label,
+	.aimeos .item-order .item-product-list .column-sum .form-control-label,
+	.aimeos .item-order .item-product-list .column-qtyopen,
+	.aimeos .item-order .item-product-list .column-sum {
+		justify-content: flex-start;
+		text-align: start;
+	}
+}
+
+.aimeos .item-order .item-product-list .product-attr .attr-code:after {
+	content: ":";
+}
+
+.aimeos .item-order .item-product-list .product-attr .attr-value:not(:last-child):after {
+	content: ",";
+}
+
+.aimeos .item-order .item-product-list .product-costs:before {
+	content: "+ ";
+}
+
+.aimeos .item-order .item-product-list .product-rebate:before {
+	content: "(- ";
+}
+
+.aimeos .item-order .item-product-list .product-rebate:after {
+	content: ")";
+}
+
+.aimeos .item-order .item-address .address-form {
+	margin-top: 1rem;
+	display: none;
+}
+
+.aimeos .item-order .item-address .address-text {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.aimeos .item-order .item-address .address-edit {
+	float: right;
+}
+
+.aimeos .item-order .item-address .address-edit:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f040";
+	cursor: pointer;
+}
+
+.aimeos .item-order .item-service .service-code {
+	font-weight: bold;
+	display: block;
+}
+
+.aimeos .item-order .item-service .service-code:before {
+	content: "(";
+}
+
+.aimeos .item-order .item-service .service-rebate:before {
+	content: "(-";
+}
+
+.aimeos .item-order .item-service .service-code:after,
+.aimeos .item-order .item-service .service-rebate:after {
+	content: ")";
+}
+
+.aimeos .item-order .item-service .service-attr th,
+.aimeos .item-order .item-service .service-attr td {
+	width: 49%;
+}
+
+.aimeos .item-order .item-total .row {
+	padding: 0.75rem;
+	margin: 0;
+}
+
+.aimeos .item-order .item-total .value {
+	text-align: end;
+}
+
+
+.aimeos .item-order .item-total .total-subtotal,
+.aimeos .item-order .item-total .total-value {
+	background-color: var(--bs-bg, #f8fafc);
+}
+
+.aimeos .item-order .item-total .total-value {
+	font-weight: bold;
+}
+
+.aimeos .item-subscription .item-product-list .column-desc {
+	text-align: start;
+}
+
+.aimeos .item-subscription .item-product-list .column-price,
+.aimeos .item-subscription .item-product-list .column-sum {
+	white-space: nowrap;
+	text-align: end;
+}
+
+.aimeos .item-subscription .item-product-list .product-name,
+.aimeos .item-subscription .item-product-list .product-attr,
+.aimeos .item-subscription .item-product-list .product-sku,
+.aimeos .item-subscription .item-product-list .product-status,
+.aimeos .item-subscription .item-product-list .product-quantity,
+.aimeos .item-subscription .item-product-list .product-price,
+.aimeos .item-subscription .item-product-list .product-costs,
+.aimeos .item-subscription .item-product-list .product-rebate {
+	display: block;
+}
+
+.aimeos .item-subscription .item-product-list .product-attr .attr-code:after {
+	content: ":";
+}
+
+.aimeos .item-subscription .item-product-list .product-attr .attr-value:not(:last-child):after {
+	content: ",";
+}
+
+.aimeos .item-subscription .item-product-list .product-costs:before {
+	content: "+ ";
+}
+
+.aimeos .item-subscription .item-product-list .product-rebate:before {
+	content: "(- ";
+}
+
+.aimeos .item-subscription .item-product-list .product-rebate:after {
+	content: ")";
+}
+
+
+.aimeos .item-coupon .actions .label.fa-upload {
+	position: relative;
+}
+
+.aimeos .item-coupon .actions input.fileupload {
+	position: absolute;
+	width: 100%;
+	padding: 0;
+	opacity: 0;
+	left: 0;
+}
+
+.aimeos .item-review .item-response {
+	height: 9rem;
+}
+
+.aimeos .item-review .item-refid {
+	border-color: transparent;
+}
+
+.aimeos .list-log .list-items td {
+	vertical-align: top;
+}
+
+.aimeos .list-log .log-message {
+	text-align: start;
+}
+
+.aimeos .list-log .log-message .content {
+	word-break: break-word;
+	max-height: 3rem;
+	overflow: hidden;
+	display: block;
+}
+
+.aimeos .list-log .log-message.show .content {
+	max-height: inherit;
+}
+
+
+.prototype-list,
+.prototype-map,
+.prototype {
+	display: none;
+}

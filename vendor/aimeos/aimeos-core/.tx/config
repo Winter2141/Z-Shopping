@@ -1,0 +1,44 @@
+[main]
+host = https://www.transifex.com
+
+[aimeos-core.core-country]
+file_filter = i18n/country/<lang>.po
+source_file = i18n/country/core-country.pot
+source_lang = en
+type = PO
+
+[aimeos-core.core-language]
+file_filter = i18n/language/<lang>.po
+source_file = i18n/language/core-language.pot
+source_lang = en
+type = PO
+
+[aimeos-core.core-currency]
+file_filter = i18n/currency/<lang>.po
+source_file = i18n/currency/core-currency.pot
+source_lang = en
+type = PO
+
+[aimeos-core.controller-common]
+file_filter = controller/common/i18n/<lang>.po
+source_file = controller/common/i18n/core-controller-common.pot
+source_lang = en
+type = PO
+
+[aimeos-core.controller-jobs]
+file_filter = controller/jobs/i18n/<lang>.po
+source_file = controller/jobs/i18n/core-controller-jobs.pot
+source_lang = en
+type = PO
+
+[aimeos-core.lib-mshop]
+file_filter = lib/mshoplib/i18n/<lang>.po
+source_file = lib/mshoplib/i18n/core-mshop.pot
+source_lang = en
+type = PO
+
+[aimeos-core.lib-mshop-code]
+file_filter = lib/mshoplib/i18n/code/<lang>.po
+source_file = lib/mshoplib/i18n/code/core-mshop-code.pot
+source_lang = en
+type = PO

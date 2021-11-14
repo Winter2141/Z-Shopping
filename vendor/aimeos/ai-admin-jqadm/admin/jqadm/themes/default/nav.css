@@ -1,0 +1,89 @@
+/**
+ * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
+ * @copyright Aimeos (aimeos.org), 2015-2018
+*/
+
+
+/* Content navigation */
+
+.aimeos .main-navbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: var(--bs-shadow);
+	background-color: var(--bs-bg-light, #ffffff);
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+	padding: 0.5rem 1rem;
+	margin: 1rem 0;
+	z-index: 1040;
+}
+
+.aimeos .main-navbar .navbar-brand {
+	align-items: baseline;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 0;
+}
+
+.aimeos .main-navbar .navbar-secondary {
+	color: var(--bs-secondary, #707880);
+	font-size: 80%;
+}
+
+.aimeos .main-navbar .navbar-secondary:before {
+	content: " ";
+}
+
+.aimeos .main-navbar span.placeholder {
+	display: inline-block;
+	height: 35px;
+}
+
+@media (min-width: 992px) {
+	.aimeos .main-navbar {
+		position: sticky;
+		top: 0;
+	}
+}
+
+
+/** Content **/
+
+.aimeos .main-content {
+	padding: 0;
+	min-height: calc(100vh - 6rem);
+}
+
+.aimeos .main-content .item-actions {
+	white-space: nowrap;
+	display: block;
+	width: inherit;
+	margin: 0.5rem 0;
+	margin-left: auto;
+}
+
+.aimeos .main-content .main-navbar .item-actions {
+	display: inline-block;
+	margin: 0;
+}
+
+.aimeos .main-content .item-actions .btn:not(.dropdown-toggle) {
+	min-width: 6.25rem;
+}
+
+.aimeos .main-content .item-actions .btn.act-help {
+	min-width: 2rem;
+}
+
+@media (min-width: 992px) {
+	.aimeos .main-content {
+		margin-left: max(15%, 12rem);
+	}
+	[dir="rtl"] .aimeos .main-content {
+		margin-right: max(15%, 12rem);
+		margin-left: 0;
+	}
+}

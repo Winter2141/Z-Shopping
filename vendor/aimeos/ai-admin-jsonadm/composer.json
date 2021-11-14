@@ -1,0 +1,32 @@
+{
+	"name": "aimeos/ai-admin-jsonadm",
+	"description": "Aimeos ai-admin-jsonadm extension",
+	"keywords": ["aimeos", "extension", "JSON API", "admin"],
+	"homepage": "https://aimeos.org/",
+	"type": "aimeos-extension",
+	"license": "LGPL-3.0-or-later",
+	"support": {
+		"source": "https://github.com/aimeos/ai-admin-jsonadm",
+		"issues": "https://github.com/aimeos/ai-admin-jsonadm/issues",
+		"forum": "https://aimeos.org/help",
+		"wiki": "https://aimeos.org/docs"
+	},
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"require": {
+		"php": "~7.1||~8.0",
+		"aimeos/aimeos-core": "dev-master"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~7.0||~8.0||~9.0",
+		"nyholm/psr7-server": "~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Aimeos\\Admin\\Jsonadm\\": "admin/jsonadm/src/Admin/Jsonadm/"
+		},
+		"classmap": [
+			"admin/jsonadm/src"
+		]
+	}
+}

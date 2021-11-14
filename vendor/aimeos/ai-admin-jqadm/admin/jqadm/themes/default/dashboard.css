@@ -1,0 +1,282 @@
+/**
+ * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
+ * @copyright Aimeos (aimeos.org), 2016-2018
+ */
+
+ .dashboard h3 {
+	font-size: 1.25rem;
+}
+
+.dashboard .card-block {
+	padding: 0.5rem;
+}
+
+.dashboard .content .chart {
+	border: none;
+	height: 280px;
+	overflow-y: auto;
+}
+
+.dashboard .card-block.collapse.show {
+	display: block;
+}
+
+.dashboard .loading {
+	background-image: url('https://aimeos.org/aimeos-spinner.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 128px;
+}
+
+
+.dashboard .quick-header {
+	font-size: 1rem;
+}
+
+.dashboard .quick-number {
+	font-size: 1.5rem;
+	font-weight: bold;
+	opacity: 0;
+}
+
+.dashboard .quick-end {
+	text-align: end;
+}
+
+.dashboard .quick-percent {
+	padding: 0.2rem 0.5rem;
+	border-radius: 2rem;
+	min-width: 3.5rem;
+	margin: 0.25rem 0;
+	font-size: 80%;
+	opacity: 0;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+}
+
+.dashboard .quick-percent.positive {
+	background-color: #d8f8e8;
+	color: #008075;
+}
+
+.dashboard .quick-percent.neutral {
+	background-color: #e9f4fc;
+	color: #0e71aa;
+}
+
+.dashboard .quick-percent.negative {
+	background-color: #ffebf0;
+	color: #a3001e;
+}
+
+body.dark .dashboard .quick-percent.positive {
+	background-color: #008075;
+	color: #d8f8e8;
+}
+
+body.dark .dashboard .quick-percent.neutral {
+	background-color: #0e71aa;
+	color: #e9f4fc;
+}
+
+body.dark .dashboard .quick-percent.negative {
+	background-color: #a3001e;
+	color: #ffebf0;
+}
+
+.dashboard .quick-progress {
+	background-color: var(--bs-line-light, #dee2e6);
+}
+
+.dashboard .quick-length {
+	height: 0.2rem;
+	width: 0;
+}
+
+.dashboard .done .quick-length {
+	transition: width .3s linear;
+}
+
+@keyframes quick-load {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+.dashboard .load .quick-length {
+	animation-name: quick-load;
+	animation-iteration-count: 15;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	animation-duration: 2s;
+}
+
+.dashboard .done .quick-number,
+.dashboard .done .quick-percent {
+	transition: opacity .3s linear;
+	opacity: 1;
+}
+
+.dashboard .order-quick-counttotal .quick-length {
+	background-color: #30a0e0;
+}
+
+.dashboard .order-quick-countcompleted .quick-length {
+	background-color: #00b0a0;
+}
+
+.dashboard .order-quick-countunfinished .quick-length {
+	background-color: #d80028;
+}
+
+.dashboard .order-quick-countcustomer .quick-length {
+	background-color: #9040C8;
+}
+
+
+.dashboard .chart .content {
+	position: relative;
+}
+
+.dashboard .chart.bar .chart,
+.dashboard .chart.line .chart {
+	padding-top: 3rem;
+}
+
+.dashboard .chart.bar .chart-legend,
+.dashboard .chart.line .chart-legend {
+	position: absolute;
+	margin: 1rem 0 .5rem 0;
+	padding: 0;
+	width: 100%;
+	height: 1.5rem;
+	overflow: hidden;
+	text-align: end;
+}
+
+[dir="rtl"] .dashboard .chart.bar .chart-legend,
+[dir="rtl"] .dashboard .chart.line .chart-legend {
+	text-align: start;
+}
+
+.dashboard .chart.bar .chart-legend:hover,
+.dashboard .chart.line .chart-legend:hover {
+	overflow: visible;
+}
+
+.dashboard .chart.pie .chart-legend {
+	height: 280px;
+	overflow-y: auto;
+}
+
+.dashboard .chart .legend {
+	background-color: var(--bs-bg-light, #ffffff);
+	cursor: pointer;
+}
+
+.dashboard .chart .legend .item {
+	display: inline-block;
+}
+
+.dashboard .chart.pie .legend .item {
+	display: inline-block;
+}
+
+.dashboard .chart .legend .item.disabled .label {
+	text-decoration: line-through;
+}
+
+.dashboard .chart .legend span {
+	font-size: 0.9rem;
+	line-height: 0.9rem;
+	user-select: none;
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+}
+
+.dashboard .chart .legend .color {
+	height: 0.9rem;
+	width: 0.9rem;
+	padding: 0;
+	margin-bottom: -2px;
+}
+
+
+/* Job styles */
+
+.dashboard .dashboard-job .content {
+	height: auto;
+}
+
+
+/* Latest order list styles */
+
+.dashboard .order-latest td {
+	height: inherit;
+}
+
+.dashboard .order-latest .order-id,
+.dashboard .order-latest .order-base-product-price,
+.dashboard .order-latest .order-statuspayment {
+	text-align: end;
+}
+
+.dashboard .order-latest .order-base-address-name,
+.dashboard .order-latest .order-base-service-payment {
+	text-align: start;
+}
+
+.dashboard .order-latest .order-statuspayment,
+.dashboard .order-latest .order-base-product-price {
+	font-weight: bold;
+}
+
+.dashboard .order-latest .order-base-service-payment:before {
+	content: "(";
+}
+
+.dashboard .order-latest .order-base-service-payment:after {
+	content: ")";
+}
+
+@media (max-width: 768px) {
+	.dashboard .order-latest .order-base-service-payment {
+		display: none;
+	}
+}
+
+@media (max-width: 640px) {
+	.dashboard .order-latest .order-base-address-name {
+		display: none;
+	}
+}
+
+.dashboard .order-countday .chart {
+	padding-top: 4rem !important;
+	padding-bottom: 3rem !important;
+}
+
+.dashboard .order-countcountry .chart {
+	overflow: hidden;
+}
+
+.dashboard .order-countcountry h3,
+.dashboard .order-countcountry .table {
+	max-width: 30rem;
+	padding: 0 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dashboard .order-countcountry td.country {
+	padding-left: 2rem;
+	text-align: start;
+	width: 66%;
+}
+
+.dashboard .order-countcountry td.number {
+	padding-right: 2rem;
+	text-align: end;
+	width: 33%;
+}

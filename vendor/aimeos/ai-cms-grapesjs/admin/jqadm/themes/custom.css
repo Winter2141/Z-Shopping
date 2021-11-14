@@ -1,0 +1,208 @@
+/*
+ * Custom ai-cms-grapesjs CSS
+ */
+
+
+ .aimeos .main-sidebar .menuitem-cms .icon:before {
+	content: "\f00a";
+}
+
+.aimeos .grapesjs-editor {
+	border: 1px solid #bbb;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+.aimeos .grapesjs-editor iframe {
+	width: 100%;
+}
+
+.gjs-one-bg{background-color:var(--bs-bg-dark, #f4f8fb)}
+.gjs-one-color{color:var(--bs-bg, #f8fafc)}
+.gjs-one-color-h:hover{color:var(--bs-bg-light, #ffffff)}
+
+.gjs-two-bg{background-color:var(--bs-bg-dark, #f4f8fb)}
+.gjs-two-color{color:var(--bs-secondary, #505860)}
+.gjs-two-color-h:hover{color:var(--bs-secondary-light, #9098a0)}
+
+.gjs-three-bg{background-color:var(--bs-bg-dark, #f4f8fb)}
+.gjs-three-color{color:var(--bs-primary, #30a0e0)}
+.gjs-three-color-h:hover{color:var(--bs-primary-light, #5bb3e6)}
+
+.gjs-four-bg{background-color:var(--bs-bg-dark, #f4f8fb)}
+.gjs-four-color{color:var(--bs-secondary-dark, #101820)}
+.gjs-four-color-h:hover{color:var(--bs-secondary-light, #9098a0)}
+
+.gjs-mdl-container,
+.gjs-mdl-dialog {
+	z-index: 1500;
+}
+
+.gjs-mdl-content button,
+.gjs-btn-prim {
+	background-color: var(--bs-primary-alt, #00b0a0);
+	color: var(--bs-menu, #ffffff) !important;
+	border-radius: .25rem !important;
+}
+
+.gjs-editor {
+	z-index: 0;
+}
+
+.gjs-pn-panels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	border-bottom: 1px solid var(--bs-line, #bbb);
+    z-index: 3;
+}
+
+.gjs-pn-panels .gjs-block svg * {
+	stroke: var(--bs-secondary, #505860);
+}
+
+.gjs-pn-panels .gjs-block:hover svg * {
+	stroke: var(--bs-primary-light, #9098A0);
+}
+
+.gjs-pn-panel:not(.gjs-pn-views-container) {
+	position: relative;
+    z-index: 4;
+}
+
+.gjs-pn-views {
+	border-bottom: none;
+    right: unset;
+    width: auto;
+    width: 100%;
+    max-width: max(15%, 150px);
+}
+
+.gjs-pn-views-container {
+	position: absolute;
+    right: 0;
+    top: 40px;
+	width: 15%;
+	min-width: 150px;
+	height: calc(100% - 40px);
+	overflow-y: auto;
+    z-index: -1;
+	padding: 0;
+	box-shadow: none;
+}
+
+.gjs-cv-canvas {
+	width: min(85%, calc(100% - 150px));
+	height: calc(100% - 41px);
+	top: 41px;
+}
+
+.gjs-trt-trait {
+	display: block;
+}
+
+.gjs-label-wrp {
+	width: 100%;
+}
+
+.gjs-field-checkbox {
+	background-color: var(--bs-bg-light, #ffffff);
+	border: 1px solid var(--bs-secondary, #505860);
+}
+
+.gjs-field-checkbox input:checked+.gjs-chk-icon {
+	border-color: var(--bs-secondary, #505860);
+	border-width: 0 3px 3px 0;
+}
+
+.gjs-blocks-c {
+    justify-content: start;
+}
+
+.gjs-block {
+    min-height: 50px;
+}
+
+.gjs-block.fa {
+	line-height: inherit;
+	padding: 0;
+}
+
+.gjs-select option, .gjs-field-select option, .gjs-clm-select option,
+.gjs-sm-select option, .gjs-fields option, .gjs-sm-unit option, .gjs-field {
+	background-color: var(--bs-bg-light, #ffffff);
+	color: var(--bs-secondary, #505860);
+}
+
+.gjs-field {
+	border-bottom: 1px solid var(--bs-line, #bbb);
+}
+
+.gjs-field .gjs-d-s-arrow {
+	border-top: 4px solid var(--bs-secondary, #505860);
+}
+
+.gjs-block {
+	border: none;
+	box-shadow: none;
+	margin: 5px 2.5%;
+}
+
+.gjs-category-title, .gjs-layer-title, .gjs-block-category .gjs-title,
+.gjs-sm-sector .gjs-sm-title, .gjs-clm-tags .gjs-sm-title {
+	background-color: rgba(0,0,0,.1);
+}
+
+.gjs-category-open, .gjs-block-category.gjs-open,
+.gjs-block-category .gjs-title {
+	border: none;
+}
+
+.gjs-pn-btn.gjs-pn-active {
+    background-color: transparent;
+    box-shadow: 0 0 3px rgb(0 0 0 / 25%);
+}
+
+/* Scrollbar styles for webkit browsers */
+.gjs-pn-views-container::-webkit-scrollbar {
+	background-color: var(--bs-bg, #f8fafc);
+	width: 0.25rem;
+}
+
+.gjs-pn-views-container::-webkit-scrollbar-thumb {
+	background-color: var(--bs-secondary, #505860);
+	outline: none;
+}
+
+/* Scrollbar styles for Firefox */
+.gjs-pn-views-container {
+	scrollbar-color: var(--bs-secondary, #505860) transparent;
+	scrollbar-width: thin;
+}
+
+.gjs-am-assets-cont {
+	background-color: transparent;
+}
+
+.gjs-am-asset {
+	background-color: var(--bs-bg-light, #ffffff);
+}
+
+.gjs-am-file-uploader {
+	display: none;
+}
+
+.gjs-am-assets-cont {
+	width: 100%;
+}
+
+.gjs-am-preview-cont {
+	background-color: transparent;
+}
+
+.gjs-am-preview-cont img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: auto;
+}

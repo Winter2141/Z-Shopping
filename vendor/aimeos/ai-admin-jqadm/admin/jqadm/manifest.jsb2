@@ -1,0 +1,103 @@
+{
+	"projectName": "Aimeos Core",
+	"licenseText": "LGPLv3, http://www.gnu.org/licenses/lgpl.html",
+	"pkgs": [{
+		"name": "Aimeos Admin Core CSS",
+		"file": "aimeos-core.css",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "jqcombo.css",
+			"path": "themes/default/"
+		},{
+			"text": "jqtree.css",
+			"path": "themes/default/"
+		},{
+			"text": "bootstrap.css",
+			"path": "themes/default/"
+		},{
+			"text": "menu.css",
+			"path": "themes/default/"
+		},{
+			"text": "nav.css",
+			"path": "themes/default/"
+		},{
+			"text": "common.css",
+			"path": "themes/default/"
+		},{
+			"text": "admin.css",
+			"path": "themes/default/"
+		},{
+			"text": "dashboard.css",
+			"path": "themes/default/"
+		}]
+	}, {
+		"name": "Aimeos Admin Core JS",
+		"file": "aimeos-core.js",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "combo.jquery.js",
+			"path": "js/"
+		},{
+			"text": "tree.jquery.js",
+			"path": "js/"
+		},{
+			"text": "sortable.js",
+			"path": "js/"
+		},{
+			"text": "axios.js",
+			"path": "js/"
+		},{
+			"text": "ckeditor.js",
+			"path": "js/"
+		},{
+			"text": "vue-components.js",
+			"path": "js/"
+		},{
+			"text": "admin.js",
+			"path": "js/"
+		},{
+			"text": "admin-aux.js",
+			"path": "js/"
+		},{
+			"text": "catalog.js",
+			"path": "js/"
+		},{
+			"text": "coupon.js",
+			"path": "js/"
+		},{
+			"text": "dashboard.js",
+			"path": "js/"
+		},{
+			"text": "dashboard-quick.js",
+			"path": "js/"
+		},{
+			"text": "dashboard-sales.js",
+			"path": "js/"
+		},{
+			"text": "dashboard-order.js",
+			"path": "js/"
+		},{
+			"text": "dashboard-service.js",
+			"path": "js/"
+		},{
+			"text": "order.js",
+			"path": "js/"
+		},{
+			"text": "product.js",
+			"path": "js/"
+		},{
+			"text": "plugin.js",
+			"path": "js/"
+		},{
+			"text": "rule.js",
+			"path": "js/"
+		},{
+			"text": "service.js",
+			"path": "js/"
+		},{
+			"text": "supplier.js",
+			"path": "js/"
+		}]
+	}],
+	"resources" : []
+}
